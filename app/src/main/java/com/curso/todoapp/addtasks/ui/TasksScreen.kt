@@ -1,5 +1,6 @@
 package com.curso.todoapp.addtasks.ui
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
@@ -23,6 +24,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -141,7 +143,7 @@ fun AddTasksDialog(show: Boolean, onDismiss: () -> Unit, onTaskAdded: (String) -
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true,
                     maxLines = 1,
-                    textStyle = TextStyle(color =  Color.DarkGray, shadow = Shadow(Color.Blue))
+                    textStyle = TextStyle(color =  Color.DarkGray)
                 )
                 Spacer(modifier = Modifier.size(16.dp))
                 Button(onClick = {
