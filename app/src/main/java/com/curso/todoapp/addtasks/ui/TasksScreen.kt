@@ -135,7 +135,7 @@ fun AddTasksDialog(show: Boolean, onDismiss: () -> Unit, onTaskAdded: (String) -
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.size(16.dp))
-                TextField(
+                OutlinedTextField(
                     value = myTask,
                     onValueChange = { myTask = it },
                     modifier = Modifier.fillMaxWidth(),
